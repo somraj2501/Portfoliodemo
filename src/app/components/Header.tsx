@@ -33,24 +33,25 @@ export function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 ${
           isScrolled
-            ? "py-8 bg-white/70 backdrop-blur-md shadow-sm"
-            : "py-6 bg-accent"
+            ? "bg-white/70 backdrop-blur-md shadow-sm"
+            : "py-6 bg-transparent text-accent"
         } px-6`}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
-          <motion.h1
-            className={`font-bold font-[Doto,sans-serif] transition-all duration-300 ease-in-out ${
-              isScrolled ? "md:text-4xl" : "text-2xl"
+          <motion.a
+            className={`font-bold font-[Doto,sans-serif] transition-all duration-300 ease-in-out text-2xl ${
+              isScrolled ? "" : "md:text-4xl"
             }`}
+            href="#"
             whileHover={{ scale: 1.05 }}
           >
             Som Raj
-          </motion.h1>
+          </motion.a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex gap-8">
@@ -58,7 +59,7 @@ export function Header() {
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-700 hover:text-black transition-colors cursor-pointer"
+                className={`transition-colors cursor-pointer ${isScrolled ? "text-neutral-600 hover:text-neutral-950" : "text-neutral-300 hover:text-neutral-50"}`}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.2 }}

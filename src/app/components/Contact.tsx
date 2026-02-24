@@ -10,7 +10,10 @@ const socials = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-50/50">
+    <section
+      id="contact"
+      className="min-h-screen snap-start py-20 px-6 bg-lime-300 flex items-center"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center"
@@ -21,7 +24,7 @@ export function Contact() {
         >
           <h2
             className="text-5xl md:text-6xl font-bold mb-6"
-            style={{ fontFamily: 'Doto, sans-serif' }}
+            style={{ fontFamily: "Doto, sans-serif" }}
           >
             Let's Work Together
           </h2>

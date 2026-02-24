@@ -8,7 +8,7 @@ import { DotPattern } from './components/DotPattern';
 
 export default function App() {
   return (
-    <div className="size-full bg-white">
+    <div className="bg-white selection:bg-black selection:text-white">
       <DotPattern />
       <Header />
       <Hero />

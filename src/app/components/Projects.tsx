@@ -24,7 +24,10 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="work" className="py-20 px-6">
+    <section
+      id="work"
+      className="flex items-center min-h-screen snap-start py-20 px-6"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="mb-16"
@@ -35,7 +38,7 @@ export function Projects() {
         >
           <h2
             className="text-5xl md:text-6xl font-bold mb-4"
-            style={{ fontFamily: 'Doto, sans-serif' }}
+            style={{ fontFamily: "Doto, sans-serif" }}
           >
             Selected Work
           </h2>
@@ -46,11 +49,7 @@ export function Projects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard
-              key={project.title}
-              {...project}
-              index={index}
-            />
+            <ProjectCard key={project.title} {...project} index={index} />
           ))}
         </div>
       </div>

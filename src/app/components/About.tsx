@@ -21,7 +21,10 @@ const features = [
 
 export function About() {
   return (
-    <section id="about" className="py-20 px-6 bg-gray-50/50">
+    <section
+      id="about"
+      className="flex items-center min-h-screen snap-start py-20 px-6 bg-amber-300"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="mb-16"
@@ -32,14 +35,14 @@ export function About() {
         >
           <h2
             className="text-5xl md:text-6xl font-bold mb-6"
-            style={{ fontFamily: 'Doto, sans-serif' }}
+            style={{ fontFamily: "Doto, sans-serif" }}
           >
             About Me
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl">
-            I'm a passionate developer who loves bringing ideas to life through code. 
-            With a focus on modern web technologies and user-centered design, I create 
-            experiences that are both beautiful and functional.
+            I'm a passionate developer who loves bringing ideas to life through
+            code. With a focus on modern web technologies and user-centered
+            design, I create experiences that are both beautiful and functional.
           </p>
         </motion.div>
 
@@ -49,11 +52,15 @@ export function About() {
             return (
               <motion.div
                 key={feature.title}
-                className="p-8 bg-white rounded-2xl"
+                className="p-8 bg-white/75 rounded-2xl z-1"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 whileHover={{ y: -5 }}
               >
                 <motion.div

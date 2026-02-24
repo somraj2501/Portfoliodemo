@@ -11,8 +11,11 @@ const skills = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="skills"
+      className="min-h-screen snap-start py-20 px-6 flex items-center justify-center"
+    >
+      <div className="max-w-7xl mx-auto flex-1">
         <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -22,13 +25,11 @@ export function Skills() {
         >
           <h2
             className="text-5xl md:text-6xl font-bold mb-4"
-            style={{ fontFamily: 'Doto, sans-serif' }}
+            style={{ fontFamily: "Doto, sans-serif" }}
           >
             Skills
           </h2>
-          <p className="text-xl text-gray-600">
-            Technologies I work with
-          </p>
+          <p className="text-xl text-gray-600">Technologies I work with</p>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-8">
@@ -50,7 +51,11 @@ export function Skills() {
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1, delay: index * 0.1 + 0.2, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{
+                    duration: 1,
+                    delay: index * 0.1 + 0.2,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                 />
               </div>
             </motion.div>

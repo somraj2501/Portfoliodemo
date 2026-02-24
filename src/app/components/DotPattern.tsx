@@ -69,7 +69,7 @@ export function DotPattern() {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0">
-      <svg width="100%" height="100%">
+      <svg width="100%" height="100%" opacity={0.2}>
         <defs>
           <motion.pattern
             id="dot-pattern"
