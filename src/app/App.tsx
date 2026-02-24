@@ -16,10 +16,10 @@ export default function App() {
       <About />
       <Skills />
       <Contact />
-      
-      <footer className="py-8 text-center text-gray-600 border-t border-gray-200">
-        <p>© 2026 Portfolio. All rights reserved.</p>
-      </footer>
+
+      {/* <footer className="py-8 text-center text-gray-600 border-t border-gray-200">
+        <p>2026 | Som Raj | </p>
+      </footer> */}
     </div>
   );
 }
