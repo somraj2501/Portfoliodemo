@@ -3,23 +3,26 @@ import { ProjectCard } from './ProjectCard';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A modern e-commerce solution with seamless checkout experience',
-    image: 'https://images.unsplash.com/photo-1621743018966-29194999d736?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNrfGVufDF8fHx8MTc3MTkwMTU5Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['React', 'TypeScript', 'Tailwind']
+    title: '_indentify',
+    description: 'An AI-powered code formatter that uses Google\'s Gemini API to detect, clean, and format messy code snippets instantly — with automatic language detection and snippet history.',
+    image: `${import.meta.env.BASE_URL}/images/indentify_screenshot.png`,
+    tags: ['React.js', 'Next.js', 'Gemini AI', 'MongoDB', 'Express', 'Tailwind'],
+    link: 'https://indentify-app.vercel.app/'
   },
   {
-    title: 'Design System',
-    description: 'Comprehensive component library for enterprise applications',
-    image: 'https://images.unsplash.com/photo-1623932078839-44eb01fbee63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHdvcmt8ZW58MXx8fHwxNzcxOTA4OTA2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Figma', 'React', 'Storybook']
+    title: '_indentify',
+    description: 'An AI-powered code formatter that uses Google\'s Gemini API to detect, clean, and format messy code snippets instantly — with automatic language detection and snippet history.',
+    image: `${import.meta.env.BASE_URL}/images/indentify_screenshot.png`,
+    tags: ['React.js', 'Next.js', 'Gemini AI', 'MongoDB', 'Express', 'Tailwind'],
+    link: 'https://indentify-app.vercel.app/'
   },
   {
-    title: 'Portfolio Website',
-    description: 'Minimalist portfolio showcasing creative work and projects',
-    image: 'https://images.unsplash.com/photo-1637937459053-c788742455be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHNjcmVlbnxlbnwxfHx8fDE3NzE5MDg5MDd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Next.js', 'Motion', 'CSS']
-  }
+    title: '_indentify',
+    description: 'An AI-powered code formatter that uses Google\'s Gemini API to detect, clean, and format messy code snippets instantly — with automatic language detection and snippet history.',
+    image: `${import.meta.env.BASE_URL}/images/indentify_screenshot.png`,
+    tags: ['React.js', 'Next.js', 'Gemini AI', 'MongoDB', 'Express', 'Tailwind'],
+    link: 'https://indentify-app.vercel.app/'
+  },
 ];
 
 export function Projects() {

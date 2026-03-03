@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { ExternalLink } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface ProjectCardProps {
@@ -7,9 +8,10 @@ interface ProjectCardProps {
   image: string;
   tags: string[];
   index: number;
+  link?: string;
 }
 
-export function ProjectCard({ title, description, image, tags, index }: ProjectCardProps) {
+export function ProjectCard({ title, description, image, tags, index, link }: ProjectCardProps) {
   return (
     <motion.div
       className="group cursor-pointer"
@@ -20,17 +22,29 @@ export function ProjectCard({ title, description, image, tags, index }: ProjectC
     >
       <motion.div
         className="relative overflow-hidden rounded-2xl mb-4 aspect-[4/3]"
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
-          className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10"
-        />
+          className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10 flex items-end justify-end p-3"
+        >
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-md hover:bg-white"
+              aria-label={`Visit ${title}`}
+            >
+              <ExternalLink size={16} className="text-gray-800" />
+            </a>
+          )}
+        </motion.div>
         <ImageWithFallback
           src={image}
           alt={title}
           className="w-full h-full object-cover"
-          query={title}
         />
       </motion.div>
 

@@ -1,4 +1,4 @@
-import { Header } from './components/Header';
+import { DotNav } from './components/DotNav';
 import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
 import { About } from './components/About';
@@ -8,9 +8,9 @@ import { DotPattern } from './components/DotPattern';
 
 export default function App() {
   return (
-    <div className="bg-white selection:bg-black selection:text-white">
+    <main className="h-[100dvh] overflow-y-auto scroll-smooth snap-y snap-mandatory bg-white selection:bg-black selection:text-white">
       <DotPattern />
-      <Header />
+      <DotNav />
       <Hero />
       <Projects />
       <About />
@@ -20,6 +20,6 @@ export default function App() {
       {/* <footer className="py-8 text-center text-gray-600 border-t border-gray-200">
         <p>2026 | Som Raj | </p>
       </footer> */}
-    </div>
+    </main>
   );
 }

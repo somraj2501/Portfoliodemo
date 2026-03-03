@@ -3,7 +3,7 @@ import { ArrowDown } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="min-h-screen snap-start flex flex-col items-center justify-center relative px-6 bg-accent-foreground text-accent overflow-hidden">
+    <section id="home" className="min-h-screen snap-start flex flex-col items-center justify-center relative px-6 bg-accent-foreground text-accent overflow-hidden">
       {/* Background Effects */}
       <motion.div
         className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(255,255,255,0.15),transparent_60%)] pointer-events-none"
